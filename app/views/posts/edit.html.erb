@@ -20,11 +20,11 @@
       enable state-of-the-art dropdown technology for this form field.
     </p>
   </div>
-
-  <div class="field">
+  <div class="field<%= ' field_with_errors' if @person.errors[:email].any? %>">
     <%= label_tag "content", "Content" %>
     <br />
     <%= text_area_tag "content", @post.content %>
-  </div>
+    </div>
+  
   <%= submit_tag "Update" %>
 <% end %>
